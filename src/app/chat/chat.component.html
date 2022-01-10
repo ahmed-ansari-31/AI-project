@@ -1,0 +1,48 @@
+<div class="container mtop">
+    <h1 for=""><u>Sentiment Analysis</u></h1>
+    <h3 for="">Programming For AI</h3>
+    <p for="" class="p-0 m-0"><i>Muhammad Ahmed Ansari BAI-20S-011</i></p>
+    <p for="" ><i>Ahmed Raza Khanzada BAI-20S-013</i></p>
+    <mat-card>
+        <mat-card-title>
+            Sentiment Analysis
+        </mat-card-title>
+
+        <!-- <div class="row">
+            <div class="col mt-4">
+                <p class="fw-bold text-"></p>
+            </div>
+        </div> -->
+        <div class="row">
+            <div class="col-12">
+                <form #textForm="ngForm" ngForm (ngSubmit)="getval(textForm)">
+                    <div class="md-form mt-1">
+                        <!-- <label for="text">Input text</label> -->
+
+                        <!-- <input autofocus autocomplete="off" required type="text" placeholder="Hello who are you"
+                            id="text" name="text" value=' ' ngModel class="form-control" /> -->
+
+                        <mat-form-field  class="example-full-width inf" appearance="fill">
+                            <mat-label>Input text</mat-label>
+                            <input matInput autocomplete="off" type="text" required ngModel  
+                            id="text" name="text" value=' ' class="form-control shadow-none" placeholder="Hello there">
+                        </mat-form-field>
+                        
+                        <div class="row p-3">
+                            <div class="col">
+                                <label class="" id='intent'><b>Predicted Intent </b>=> {{str}}</label>
+                            </div>
+                            <div class="col">
+                                <label class="" id='confidence'><b>Confidence </b>=> {{confidence}}</label>
+                            </div>
+                        </div>
+                        <button [disabled]="!textForm.valid" class="btn1 mt-2" mat-raised-button
+                         color="primary" type="submit">Search</button>
+                        <!-- <button [disabled]="!textForm.valid" class="btn1 btn btn-info mt-2"
+                            type="submit">Search</button> -->
+                    </div>
+                </form>
+            </div>
+        </div>
+    </mat-card>
+</div>
